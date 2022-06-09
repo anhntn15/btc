@@ -90,5 +90,5 @@ class HistoricalBTCRecord:
 
 
 # sample:
-caller = HistoricalBTCRecord()
-caller.single_fetch(RecordType.DAILY, limit=5)
+# caller = HistoricalBTCRecord()
+# caller.single_fetch(RecordType.DAILY, limit=5)

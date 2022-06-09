@@ -1,16 +1,15 @@
-# This is a sample Python script.
+import os
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from config import DATA_DIR
+from utils.api_caller import RecordType
+from utils.data_utils import json_to_csv
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def prepare_csv_file(record_type: RecordType):
+    raw_file = os.path.join(DATA_DIR, f'raw_{record_type.name}.txt')
+    csv_file = os.path.join(DATA_DIR, f'raw_{record_type.name}.csv')
+    json_to_csv(raw_file, csv_file, 'timestr', 'time', 'open', 'close', 'low', 'high', 'volumefrom', 'volumeto')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+prepare_csv_file(RecordType.HOURLY)
+prepare_csv_file(RecordType.DAILY)
