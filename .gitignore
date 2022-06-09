@@ -1,0 +1,11 @@
+# IDE & Editor folder
+/.vscode/
+/.idea/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# secret files
+config/cryptocompare.json
