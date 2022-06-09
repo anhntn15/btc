@@ -1,0 +1,6 @@
+{
+  "api_key": "",
+  "api_prefix": "https://min-api.cryptocompare.com/data/v2/",
+  "fsym": "BTC",
+  "tsym": "EUR"
+}

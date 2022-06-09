@@ -6,6 +6,3 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
-# secret files
-config/cryptocompare.json
