@@ -11,5 +11,5 @@ def prepare_csv_file(record_type: RecordType):
     json_to_csv(raw_file, csv_file, 'timestr', 'time', 'open', 'close', 'low', 'high', 'volumefrom', 'volumeto')
 
 
-prepare_csv_file(RecordType.HOURLY)
-prepare_csv_file(RecordType.DAILY)
+# prepare_csv_file(RecordType.HOURLY)
+# prepare_csv_file(RecordType.DAILY)

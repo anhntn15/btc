@@ -7,7 +7,7 @@ import os.path
 
 from config import DATA_DIR
 from utils.api_caller import HistoricalBTCRecord, RecordType
-from utils.time_utils import to_timestamp
+from utils.time_utils import to_timestamp, to_datetime_str
 
 start_datetime = "2022-01-01 00:00:00"
 caller = HistoricalBTCRecord()
@@ -29,6 +29,7 @@ def get_records(record_type: RecordType, append=False):
     count = 0
     from_ts = to_timestamp(start_datetime)
     for record in caller.fetch_records_in_time_period(record_type=record_type, from_ts=from_ts):
+        record['timestr'] = to_datetime_str(record['time'])
         f.write(json.dumps(record))
         f.write('\n')
         count += 1

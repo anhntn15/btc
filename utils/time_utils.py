@@ -18,7 +18,7 @@ def to_datetime_str(timestamp: int):
     return datetime.datetime.fromtimestamp(timestamp, tz=datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S')
 
 
-print(to_timestamp('2022-06-09 16:00:00'))
+# print(to_timestamp('2022-06-09 16:00:00'))
 # print(to_datetime_str(to_timestamp('2022-06-09 16:00:00')))
 # print(current_timestamp())
 # print(to_datetime_str(current_timestamp()))
