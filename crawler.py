@@ -42,7 +42,3 @@ def get_records(record_type: RecordType, append=False):
 
     print(f'fetched {count} records, saved data to file: {output_file}')
 
-
-# usage: uncomment to start crawl data
-# get_records(record_type=RecordType.DAILY)
-# get_records(record_type=RecordType.HOURLY)
